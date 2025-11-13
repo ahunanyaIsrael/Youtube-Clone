@@ -1,16 +1,107 @@
-# React + Vite
+# YouTube Clone (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lightweight YouTube-like interface built with React and Vite — a learning/demo project that showcases a simple video feed, sidebar, recommended videos and a Play view.
 
-Currently, two official plugins are available:
+**Highlights**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Modern React with Vite for fast dev builds
+- Componentized layout: `NavBar`, `SideBar`, `Feed`, `Recommended`, `PlayVideo`
+- Routing-ready (uses `react-router-dom`) and moment-based date handling
 
-## React Compiler
+**Repo owner:** ahunanyaIsrael
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Video feed with thumbnails and titles
+- Play view for a selected video
+- Sidebar navigation and recommended videos list
+- Simple, responsive UI (CSS modules / component styles under `src/components`)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- Vite
+- react-router-dom
+- moment (for date/time formatting)
+- Plain CSS modules (each component has its own `.css` file)
+
+## Project Structure (important files)
+
+- `src/` — application source
+  - `App.jsx` — app shell and routes
+  - `main.jsx` — app entry
+  - `data.js` — sample data used by the UI
+  - `components/` — UI components (see subfolders)
+    - `NavBar/`, `SideBar/`, `Feed/`, `Recommended/`, `PlayVideo/`
+  - `pages/` — page-level components `Home/` and `Video/`
+- `index.html`, `vite.config.js` — Vite configuration and entry HTML
+- `package.json` — dependencies and scripts
+
+## Getting Started
+
+Prerequisites
+
+- Node.js (v16+ recommended)
+
+Install dependencies
+
+PowerShell
+
+```
+npm install
+```
+
+Start the dev server
+
+PowerShell
+
+```
+npm run dev
+```
+
+Build for production
+
+PowerShell
+
+```
+npm run build
+```
+
+Preview production build locally
+
+PowerShell
+
+```
+npm run preview
+```
+
+## Available Scripts
+
+- `npm run dev` — start Vite dev server
+- `npm run build` — build production bundle
+- `npm run preview` — locally preview production build
+
+## Notes
+
+- Routing is prepared in `App.jsx` and pages live under `src/pages`.
+- Sample data is provided in `src/data.js`; replace with live API calls to connect to a real backend.
+
+## Deployment
+
+- Ready to deploy on Vercel (a `vercel.json` file is included). Connect the repo and deploy the `main` branch.
+
+## Contributing
+
+Feel free to open issues or PRs. Suggested next improvements:
+
+- Add lazy-loading for video thumbnails
+- Integrate with a real video API (YouTube Data API or a mock service)
+- Add unit tests and CI (GitHub Actions)
+
+## License
+
+This repository includes a `LICENSE` file. Check it for the project license.
+
+---
+
+If you'd like, I can add screenshots, update `package.json` with a preview script, or open a PR that wires a simple API. What would you like next?
